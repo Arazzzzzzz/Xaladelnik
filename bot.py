@@ -4,7 +4,7 @@ from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,
 
 app = Client("my_bot",
 
-api_id=int(os.environ.get("APP_ID")
+api_id= int(os.environ.get("APP_ID"))
 api_hash= os.environ.get("API_HASH")
 bot_token=os.environ.get("TOKEN")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)

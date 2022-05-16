@@ -2,7 +2,11 @@ from pyrogram import Client
 from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,
                             InlineKeyboardMarkup, InlineKeyboardButton)
 
-app = Client("my_bot",
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(name)s - [%(levelname)s] - %(message)s'
+)
+LOGGER = logging.getLogger(__name__)
 
 api_id= int(os.environ.get("APP_ID"))
 api_hash= os.environ.get("API_HASH")
